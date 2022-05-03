@@ -1,12 +1,12 @@
 const Koa = require('koa')
 const koaBody = require('koa-body')
-const books = require('./books')
+const products = require('./products')
 
 const app = new Koa()
 
 app.use(koaBody())
 
-app.use(books.routes())
+app.use(products.routes())
 
 app.listen(3000, () => {
     console.log('Running...')
